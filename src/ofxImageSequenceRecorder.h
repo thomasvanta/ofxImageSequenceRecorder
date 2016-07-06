@@ -67,6 +67,12 @@ public:
     void addFrame(ofVideoPlayer &player){
         addFrame(player.getPixelsRef());
     }
+    
+    void addFrame(ofTexture &texture){
+        ofPixels pix;
+        texture.readToPixels(pix);
+        addFrame(pix);
+    }
         
     void addFrame(ofPixels imageToSave) {  
 
